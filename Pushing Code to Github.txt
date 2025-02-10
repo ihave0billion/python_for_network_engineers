@@ -1,8 +1,0 @@
-Pushing Code to Github
-git add .
-git commit -m "My first commit"
-git push
-
-#next 3 commands only needed the first time
-git remote add origin <your-repository-url>
-git push -u origin main
