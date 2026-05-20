@@ -1,4 +1,4 @@
-#a floating point is a whole number with a decimal place
+#a floating point is a number with a decimal place
 #floats can also use 'e' for exponential values
 
 
@@ -9,3 +9,6 @@ print(type(float("4.5")))
 
 print(1e6)
 print(type(1e6))
+
+print(0.15)
+print(type(0.15))

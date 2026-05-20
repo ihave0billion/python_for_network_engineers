@@ -9,6 +9,9 @@ password = 'cisco'
 device_type = 'cisco_ios'
 port = 22
 
+# The ip inside def get_log(ip): is a parameter. It's a placeholder name that gets bound to whatever value you pass in when you call the function.
+#  It doesn't need to be defined anywhere else because the function call itself defines it.
+
 def get_log(ip):
     net_connect = netmiko.ConnectHandler(ip=ip,device_type=device_type, username=username, password=password, port=port)
     return net_connect.send_command('show log')
