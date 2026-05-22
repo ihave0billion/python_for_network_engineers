@@ -1,0 +1,59 @@
+
+# mutable key:value pairs , separated by commas
+# values can be any object (string, list, etc.)
+# are dynamic
+
+router = {"vendor": "Cisco", "DeviceID": "3800", "Location": "San Jose"}
+print(router)
+
+# Retreive value of key
+print(router["vendor"])
+
+# add a key:value pair to dict
+router["OS"] = "IOS-XE"
+print(router)
+
+# Define the dictionary
+switch = {'vendor': 'Cisco', 'DeviceModel': 'Nexus 9000', 'OS': 'NX-OS', 'Location': 'RTP'}
+
+# .get() method - get a key or value and if there is none, return NONE instead of error
+print("--- .get() method ---")
+print(switch.get('OS'))
+print()
+
+# .items() method - print key:value pairs as a list of tuples. Useful for Loops
+print("--- .items() method ---")
+print(switch.items())
+print()
+
+# .keys() method
+print("--- .keys() method ---")
+print(switch.keys())
+print()
+
+# .values() method
+print("--- .values() method ---")
+print(switch.values())
+
+# Initialize the dictionary to match the starting state
+switch = {'vendor': 'Cisco', 'DeviceModel': 'Nexus 9000', 'OS': 'NX-OS', 'Location': 'RTP'}
+
+# .pop() Method
+print("--- .pop() Method ---")
+# .pop() removes the specified key and returns its value
+print(switch.pop("OS")) 
+print(switch)
+print()
+
+# .update() Method - merges two dictionaries.
+print("--- .update() Method ---")
+switch1 = {"OS": "NX-OS", "ports": 48}
+print(switch) # Show state before update
+switch.update(switch1)
+print(switch) # Show state after update
+print()
+
+# .clear() Method - empty all key:value pairs
+print("--- .clear() Method ---")
+switch.clear()
+print(switch)
